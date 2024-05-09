@@ -3,7 +3,6 @@ package apicampeonatosfifa.apicampeonatosfifa.core.entidades.interfaces.servicio
 import java.util.List;
 
 import apicampeonatosfifa.apicampeonatosfifa.core.entidades.Campeonato;
-import apicampeonatosfifa.apicampeonatosfifa.core.entidades.Seleccion;
 
 public interface ICampeonatoServicio {
 
