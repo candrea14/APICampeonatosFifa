@@ -4,38 +4,38 @@ import java.util.List;
 
 import org.springframework.stereotype.Service;
 
-import apicampeonatosfifa.apicampeonatosfifa.core.entidades.Campeonato;
-import apicampeonatosfifa.apicampeonatosfifa.core.entidades.interfaces.repositorios.ICampeonatoRepositorio;
-import apicampeonatosfifa.apicampeonatosfifa.core.entidades.interfaces.servicios.ICampeonatoServicio;
+import apicampeonatosfifa.apicampeonatosfifa.core.entidades.Ciudad;
+import apicampeonatosfifa.apicampeonatosfifa.core.entidades.interfaces.repositorios.ICiudadRepositorio;
+import apicampeonatosfifa.apicampeonatosfifa.core.entidades.interfaces.servicios.ICiudadServicio;
 
 @Service
-public class CampeonatoServicio implements ICampeonatoServicio {
+public class CiudadServicio implements ICiudadServicio {
 
-  private ICampeonatoRepositorio repositorio;
+  private ICiudadRepositorio repositorio;
 
-  private CampeonatoServicio(ICampeonatoRepositorio repositorio) {
+  public CiudadServicio(ICiudadRepositorio repositorio) {
     this.repositorio = repositorio;
   }
 
   @Override
-  public List<Campeonato> listar() {
+  public List<Ciudad> listar() {
     return repositorio.findAll();
   }
 
   @Override
-  public Campeonato obtener(int id) {
+  public Ciudad obtener(int id) {
     // TODO Auto-generated method stub
     throw new UnsupportedOperationException("Unimplemented method 'obtener'");
   }
 
   @Override
-  public Campeonato agregar(Campeonato campeonato) {
+  public Ciudad agregar(Ciudad ciudad) {
     // TODO Auto-generated method stub
     throw new UnsupportedOperationException("Unimplemented method 'agregar'");
   }
 
   @Override
-  public Campeonato modificar(Campeonato campeonato) {
+  public Ciudad modificar(Ciudad ciudad) {
     // TODO Auto-generated method stub
     throw new UnsupportedOperationException("Unimplemented method 'modificar'");
   }
