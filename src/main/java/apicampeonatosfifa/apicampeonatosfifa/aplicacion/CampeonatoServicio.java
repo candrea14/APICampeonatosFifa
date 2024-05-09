@@ -6,6 +6,7 @@ import java.util.Optional;
 import org.springframework.stereotype.Service;
 
 import apicampeonatosfifa.apicampeonatosfifa.core.entidades.Campeonato;
+import apicampeonatosfifa.apicampeonatosfifa.core.entidades.Seleccion;
 import apicampeonatosfifa.apicampeonatosfifa.core.entidades.interfaces.repositorios.ICampeonatoRepositorio;
 import apicampeonatosfifa.apicampeonatosfifa.core.entidades.interfaces.servicios.ICampeonatoServicio;
 
@@ -25,8 +26,8 @@ public class CampeonatoServicio implements ICampeonatoServicio {
 
   @Override
   public Campeonato obtener(int id) {
-    // TODO Auto-generated method stub
-    throw new UnsupportedOperationException("Unimplemented method 'obtener'");
+    Optional<Campeonato> campeonatoEncontrada = repositorio.findById(id);
+    return campeonatoEncontrada.isEmpty()? null: campeonatoEncontrada.get();
   }
 
   @Override
@@ -57,8 +58,7 @@ public class CampeonatoServicio implements ICampeonatoServicio {
 
   @Override
   public List<Campeonato> buscar(String nombre) {
-    // TODO Auto-generated method stub
-    throw new UnsupportedOperationException("Unimplemented method 'buscar'");
+    return repositorio.buscar(nombre);
   }
 
 }
