@@ -1,6 +1,7 @@
 package apicampeonatosfifa.apicampeonatosfifa.aplicacion;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.stereotype.Service;
 
@@ -30,20 +31,28 @@ public class CiudadServicio implements ICiudadServicio {
 
   @Override
   public Ciudad agregar(Ciudad ciudad) {
-    // TODO Auto-generated method stub
-    throw new UnsupportedOperationException("Unimplemented method 'agregar'");
+    ciudad.setId(0);
+    return repositorio.save(ciudad);
   }
 
   @Override
   public Ciudad modificar(Ciudad ciudad) {
-    // TODO Auto-generated method stub
-    throw new UnsupportedOperationException("Unimplemented method 'modificar'");
+   Optional<Ciudad> ciudadEncontrada = repositorio.findById(ciudad.getId());
+    if (!ciudadEncontrada.isEmpty()) {
+      return repositorio.save(ciudad);
+    } else {
+      return null; 
+    }
   }
 
   @Override
   public boolean eliminar(int id) {
-    // TODO Auto-generated method stub
-    throw new UnsupportedOperationException("Unimplemented method 'eliminar'");
+    try {
+      repositorio.deleteById(id);
+      return true;
+    } catch (Exception ex) {
+      return false;
+    }
   }
 
 }
