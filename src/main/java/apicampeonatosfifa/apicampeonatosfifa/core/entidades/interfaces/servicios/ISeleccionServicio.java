@@ -17,4 +17,5 @@ public interface ISeleccionServicio {
   public Seleccion modificar(Seleccion seleccion);
 
   public boolean eliminar(int id);
+
 }

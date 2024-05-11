@@ -12,7 +12,6 @@ import jakarta.persistence.Table;
 @Entity
 @Table(name = "pais")
 public class Seleccion {
-
   @Id
   @GeneratedValue(strategy = GenerationType.AUTO, generator = "secuencia_pais")
   @GenericGenerator(name = "secuencia_pais", strategy = "increment")
@@ -29,32 +28,32 @@ public class Seleccion {
   }
 
   public Seleccion(int id, String nombre, String entidad) {
-    this.id = id;
-    this.nombre = nombre;
-    this.entidad = entidad;
+      this.id = id;
+      this.nombre = nombre;
+      this.entidad = entidad;
   }
 
   public int getId() {
-    return id;
+      return id;
   }
 
   public void setId(int id) {
-    this.id = id;
+      this.id = id;
   }
 
   public String getNombre() {
-    return nombre;
+      return nombre;
   }
 
   public void setNombre(String nombre) {
-    this.nombre = nombre;
+      this.nombre = nombre;
   }
 
   public String getEntidad() {
-    return entidad;
+      return entidad;
   }
 
   public void setEntidad(String entidad) {
-    this.entidad = entidad;
+      this.entidad = entidad;
   }
 }

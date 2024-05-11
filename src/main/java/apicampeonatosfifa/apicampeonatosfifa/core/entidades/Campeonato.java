@@ -16,8 +16,8 @@ import jakarta.persistence.Table;
 public class Campeonato {
 
   @Id
-  @GeneratedValue(strategy = GenerationType.AUTO, generator = "secuencia_campeonato")
-  @GenericGenerator(name = "secuencia_campeonato", strategy = "increment")
+  @GeneratedValue(strategy = GenerationType.AUTO, generator = "secuencia_pais")
+  @GenericGenerator(name = "secuencia_pais", strategy = "increment")
   @Column(name = "id")
   private int id;
 
@@ -28,49 +28,49 @@ public class Campeonato {
   private int año;
 
   @ManyToOne
-  @JoinColumn(name = "idpais", referencedColumnName = "id")
+  @JoinColumn(name="idpais", referencedColumnName = "id")
   private Seleccion seleccion;
 
   public Campeonato() {
   }
 
   public Campeonato(int id, String nombre, int año, Seleccion seleccion) {
-    this.id = id;
-    this.nombre = nombre;
-    this.año = año;
-    this.seleccion = seleccion;
+      this.id = id;
+      this.nombre = nombre;
+      this.año = año;
+      this.seleccion = seleccion;
   }
 
   public int getId() {
-    return id;
+      return id;
   }
 
   public void setId(int id) {
-    this.id = id;
+      this.id = id;
   }
 
   public String getNombre() {
-    return nombre;
+      return nombre;
   }
 
   public void setNombre(String nombre) {
-    this.nombre = nombre;
+      this.nombre = nombre;
   }
 
   public int getAño() {
-    return año;
+      return año;
   }
 
   public void setAño(int año) {
-    this.año = año;
+      this.año = año;
   }
 
   public Seleccion getSeleccion() {
-    return seleccion;
+      return seleccion;
   }
 
   public void setSeleccion(Seleccion seleccion) {
-    this.seleccion = seleccion;
+      this.seleccion = seleccion;
   }
 
 }

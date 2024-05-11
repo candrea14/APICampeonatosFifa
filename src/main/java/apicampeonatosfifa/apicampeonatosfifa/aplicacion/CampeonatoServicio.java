@@ -6,7 +6,6 @@ import java.util.Optional;
 import org.springframework.stereotype.Service;
 
 import apicampeonatosfifa.apicampeonatosfifa.core.entidades.Campeonato;
-import apicampeonatosfifa.apicampeonatosfifa.core.entidades.Seleccion;
 import apicampeonatosfifa.apicampeonatosfifa.core.entidades.interfaces.repositorios.ICampeonatoRepositorio;
 import apicampeonatosfifa.apicampeonatosfifa.core.entidades.interfaces.servicios.ICampeonatoServicio;
 
